@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MyBox extends StatelessWidget {
+class BottomBox extends StatelessWidget {
   final String image;
-  const MyBox({super.key, required this.image});
+  const BottomBox({super.key, required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class MyBox extends StatelessWidget {
         width: 105,
         height: 105,
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(30), boxShadow: [BoxShadow(color: Colors.grey.shade400, blurRadius: 10, spreadRadius: 2)]),
+            color: Colors.white, borderRadius: BorderRadius.circular(30)),
 
         child: Image.asset(image, scale: 10,),
       ),
