@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:wallet_ui/components/bottom_box.dart';
 import 'package:wallet_ui/components/box.dart';
 import 'package:wallet_ui/components/cards.dart';
+import '../components/long_box.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -121,49 +121,15 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 30,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  BottomBox(image: 'lib/images/pie-chart.png'),
-                  Container(
-                    width: 230,
-                    height: 105,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                    child: const Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 12.0),
-                                  child: Text('Statistics', style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),),
-                                ),
-                                
-                                Text('Payment and income'),
-                              ],
-                            ),
-                          ],
-                        ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          
-                          Icon(Icons.arrow_forward_ios),
-                        ],
-                      ),
-                      
-                    ],),
-                    
-                  )
-                ],
+              LongBox(image: 'lib/images/pie-chart.png', text: 'Payment and income', title: 'Statistics',),
+
+              SizedBox(
+                height: 30,
               ),
+
+              LongBox(image: 'lib/images/transfer.png', title: 'Transfer To Bank', text: 'Transfer your money to another bank',),
+
+              
             ],
           ),
         ),
